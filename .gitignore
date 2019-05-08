@@ -1,0 +1,9 @@
+#Folders
+C++/C++/Debug
+C++/Debug
+
+#Extensions
+*.ipch
+*.suo
+*.db
+*.opendb
