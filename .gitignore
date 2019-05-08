@@ -1,9 +1,17 @@
 #Folders
 C++/C++/Debug
 C++/Debug
+C++/x64
+/x64
 
 #Extensions
 *.ipch
 *.suo
 *.db
 *.opendb
+*.log
+*.tlog
+*.obj
+*.exe
+*.idb
+*.pdb
