@@ -1,0 +1,14 @@
+---Function we can use-----
+map
+filter
+apply
+foldl
+foldr
+length
+max
+maximum
+min
+minimum
+
+---Common implemented-----
+sum
