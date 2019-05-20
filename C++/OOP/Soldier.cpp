@@ -3,6 +3,7 @@
 
 
 Soldier::Soldier()
+	:Figure()
 {
 }
 
