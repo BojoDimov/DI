@@ -1,53 +1,11 @@
 #include <iostream>
 #include "Queue.h"
 #include "CyclicBufferedQueue.h"
-
-class Stack {
-private:
-	struct StackNode {
-		int value;
-		StackNode* prev;
-	};
-
-	StackNode* current;
-
-public:
-	Stack()
-		:current(nullptr){ }
-	~Stack() {
-		StackNode* prev;
-		while (!empty()) {
-			prev = current->prev;
-			delete current;
-			current = prev;
-		}
-	}
-
-	void push(int value) {
-		auto next = new StackNode;
-		next->value = value;
-		next->prev = current;
-		current = next;
-	}
-
-	int pop() {
-		if (empty())
-			throw "Cannot pop from empty stack";
-
-		auto prev = current->prev;
-		int value = current->value;
-		delete current;
-		current = prev;
-		return value;
-	}
-
-	bool empty() {
-		return current == nullptr;
-	}
-};
+#include "Stack.h"
+#include "BinarySearchTree.h"
 
 void test_dynamic_queue() {
-	IQueueable * queue = new Queue;
+	IQueue * queue = new Queue;
 	std::cout << "Queue test:\n";
 	for (int i = 0; i <= 15; ++i)
 		queue->push(i);
@@ -75,16 +33,26 @@ void test_dynamic_queue() {
 }
 
 void test_linked_stack() {
-	Stack stack;
+	Stack<int> stack;
 	for (int i = 0; i <= 15; ++i)
 		stack.push(i);
 	while (!stack.empty())
 		std::cout << stack.pop() << " ";
 }
 
+void test_bst() {
+	BinarySearchTree tree;
+	tree.add({ 9, 5, 15, 1, 3, 6, 12, 16 });
+	tree.add(3);
+	tree.add(4);
+	tree.print();
+	std::cout << "\nFind 4? " << tree.search(4) << "\nFind 100? " << tree.search(100) << std::endl;
+}
 
-int main() {
-	test_dynamic_queue();
+
+int main(int argc, char ** argv) {
 	//test_linked_stack();
+	//test_dynamic_queue();
+	test_bst();
 	return 0;
 }

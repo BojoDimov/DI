@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
-#include "Queueable.h"
+#include "IQueue.h"
 
-class Queue: public IQueueable
+class Queue: public IQueue
 {
 public:
 	Queue();

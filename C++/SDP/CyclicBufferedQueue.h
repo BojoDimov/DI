@@ -1,7 +1,7 @@
 #pragma once
-#include "Queueable.h"
+#include "IQueue.h"
 
-class CyclicBufferedQueue : public IQueueable
+class CyclicBufferedQueue : public IQueue
 {
 public:
 	CyclicBufferedQueue();
@@ -20,7 +20,6 @@ private:
 	int write;
 	int read;
 
-	// Inherited from IQueueable
 	void resize();
 };
 

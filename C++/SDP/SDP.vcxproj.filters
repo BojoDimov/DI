@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{a9246c45-4d2f-4173-badb-5a5a5b6f7cb6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -26,10 +29,19 @@
     <ClInclude Include="Queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Queueable.h">
+    <ClInclude Include="CyclicBufferedQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CyclicBufferedQueue.h">
+    <ClInclude Include="IQueue.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IStack.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
