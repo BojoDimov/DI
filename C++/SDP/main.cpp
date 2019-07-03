@@ -49,10 +49,67 @@ void test_bst() {
 	std::cout << "\nFind 4? " << tree.search(4) << "\nFind 100? " << tree.search(100) << std::endl;
 }
 
+struct Vertex {
+	int value;
+};
+
+struct Edge {
+	int source;
+	int dest;
+};
+
+class Graph {
+private:
+	std::vector<Vertex> V;
+	std::vector<Edge> E;
+
+public:
+	//Data Encapsulation
+	void addVertex(int value) {
+
+	}
+
+	void addEdge(int source, int dest) {
+
+	}
+
+	void removeVertex(int value) {
+
+	}
+
+	void removeEdge(int source, int dest) {
+
+	}
+};
+
+class Tree : public Graph {
+public:
+	void addEdge(int source, int dest) {
+		//check if we are not making cycles
+		Graph::addEdge(source, dest);
+	}
+};
+
+//Abstraction
+class WeightedStructure {
+public:
+	virtual float getScore() = 0;
+};
+
+//Multiple inheritance
+class WeightedGraph : public virtual Graph, public WeightedStructure {
+
+};
+
+//Diamond problem
+class MinimalSpanningTree : public Tree, public WeightedGraph {
+
+};
+
 
 int main(int argc, char ** argv) {
 	//test_linked_stack();
 	//test_dynamic_queue();
-	test_bst();
+	//test_bst();
 	return 0;
 }
